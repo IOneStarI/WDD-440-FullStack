@@ -1,0 +1,146 @@
+:root {
+  color-scheme: dark;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #3d4650 0%, #2a2f36 60%, #1f2329 100%);
+  color: #e8edf3;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 2.5rem 1rem;
+}
+
+.app {
+  width: min(680px, 100%);
+}
+
+.new-item-form {
+  margin-bottom: 2rem;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.form-row label {
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #f0f6ff;
+}
+
+.form-row input {
+  width: 100%;
+  border-radius: 0.35rem;
+  border: 1px solid #0b577f;
+  background-color: #0d6fa0;
+  color: #ffffff;
+  font-size: 1.15rem;
+  padding: 0.75rem 0.8rem;
+  outline: none;
+}
+
+.form-row input:focus {
+  border-color: #4db8ff;
+  box-shadow: 0 0 0 2px rgba(77, 184, 255, 0.35);
+}
+
+.btn {
+  width: 100%;
+  margin-top: 0.6rem;
+  border-radius: 0.35rem;
+  border: 1px solid #2f7ea8;
+  background: transparent;
+  color: #27a6f7;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0.4rem 0.75rem;
+  cursor: pointer;
+  transition: all 160ms ease;
+}
+
+.btn:hover {
+  background-color: rgba(39, 166, 247, 0.12);
+}
+
+.btn-danger {
+  width: auto;
+  margin: 0;
+  border-color: #7a2e3a;
+  background-color: #5a1d27;
+  color: #ff8f98;
+  font-size: 0.92rem;
+  font-weight: 600;
+  padding: 0.28rem 0.6rem;
+}
+
+.btn-danger:hover {
+  background-color: #702633;
+}
+
+.header {
+  margin: 0 0 1rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  font-size: 1.55rem;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.list li label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.list li input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  accent-color: #27a6f7;
+}
+
+.list li:has(input:checked) label {
+  color: #99a7b4;
+  text-decoration: line-through;
+}
+
+@media (max-width: 540px) {
+  .form-row label {
+    font-size: 1.25rem;
+  }
+
+  .header {
+    font-size: 1.7rem;
+  }
+
+  .list {
+    font-size: 1.2rem;
+  }
+}
